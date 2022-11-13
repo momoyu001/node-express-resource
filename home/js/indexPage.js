@@ -29,7 +29,7 @@ $(function () {
 function imgList(size) {
     $.ajax({
         type: 'get',
-        url: `http://192.168.0.100:3000/home?page=${size}`,
+        url: `http://192.168.0.100:3001/home?page=${size}`,
         dataType: 'json',
         success: function (res) {
             console.log(res.data);

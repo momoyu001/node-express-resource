@@ -1,6 +1,7 @@
 var express = require('express');
 var app = express();
 var Tools = require('./tools');
+var portConfig = require('./port');
 
 // 1、实现静态资源托管 - 使用express框架
 
@@ -30,4 +31,4 @@ app.get('/home', function (req, res) {
           });
 });
 
-app.listen(3000, () => console.log('监听3000端口'));
+app.listen(portConfig.port, () => console.log(`监听${portConfig.port}端口`));
